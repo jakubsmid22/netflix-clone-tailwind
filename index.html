@@ -6,11 +6,12 @@
     <title>Netflix Česko - dívejte se na TV pořady online, dívejte se na filmy online</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon" href="/img/4375011_logo_netflix_icon.ico" type="image/x-icon">
+    <script defer src="/index.js"></script>
 </head>
 <body>
 
     <header>
-        <nav class="h-20 px-5 flex items-center bg-black justify-between">
+        <nav class="z-50 h-20 px-5 flex items-center justify-between md:justify-around fixed w-screen">
             <div class="h-12 md:h-20 flex items-center">
                 <img class="h-full" src="/img/Netflix_Logo_RGB.png" alt="netflix-logo">
             </div>
@@ -22,25 +23,28 @@
                         </svg>
                     </div>
                     <div>
-                        <select class="focus:outline-none bg-transparent w-24">
+                        <select class="focus:outline-none bg-transparent w-5 md:w-20">
                             <option class="focus:outline-none text-black" value="cs">Čeština</option>
                             <option class="focus:outline-none text-black" value="en">English</option>
                         </select>
                     </div>
                 </div>
-                <button class="bg-[#E50914] text-white rounded-[4px] py-1 px-4 font-bold">Sign In</button>
+                <button class="bg-[#E50914] text-white rounded-[4px] py-1 px-4 h-8 font-bold">Sign In</button>
             </div>
         </nav>
     </header>
     
 
-    <section>
-        <h1></h1>
-        <p></p>
-        <p></p>
-        <div>
-            <input type="text">
-            <button></button>
+    <section class="relative bg-[url('img/first-section-bg.jpg')] h-[44rem] bg-no-repeat" style="background-size: 120%; background-position: center bottom 40%;">
+        <div class="absolute inset-0 bg-black opacity-70"></div>
+        <div class="relative">
+            <h1 class=""></h1>
+            <p></p>
+            <p></p>
+            <div>
+                <input type="text">
+                <button></button>
+            </div>
         </div>
     </section>
 
