@@ -6,9 +6,10 @@
     <title>Netflix Česko - dívejte se na TV pořady online, dívejte se na filmy online</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon" href="/img/4375011_logo_netflix_icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
     <script defer src="/index.js"></script>
 </head>
-<body>
+<body class="h-fit bg-slate-400 ">
 
     <header>
         <nav class="z-50 h-20 px-5 flex items-center justify-between md:justify-around fixed w-screen">
@@ -25,7 +26,7 @@
                     <div>
                         <select class="focus:outline-none bg-transparent w-5 md:w-20">
                             <option class="focus:outline-none text-black" value="cs">Čeština</option>
-                            <option class="focus:outline-none text-black" value="en">English</option>
+                     ;       <option class="focus:outline-none text-black" value="en">English</option>
                         </select>
                     </div>
                 </div>
@@ -35,14 +36,17 @@
     </header>
     
 
-    <section class="relative bg-[url('img/first-section-bg.jpg')] h-[44rem] bg-no-repeat" style="background-size: 120%; background-position: center bottom 40%;">
+    <section class="relative bg-red-300 h-[32rem] lg:h-[44rem] bg-[url('img/first-section-bg.jpg')] bg-no-repeat bg-cover">
         <div class="absolute inset-0 bg-black opacity-70"></div>
-        <div class="relative">
-            <h1 class=""></h1>
-            <p></p>
-            <p></p>
+        <div class="relative h-full text-white flex flex-col items-center justify-center">
+            <h1 class="">Neomezené sledování filmů, TV pořadů a dalšího obsahu</h1>
+            <p>Dívejte se kdekoli. Zrušte kdykoli</p>
+            <p>Jste připraveni se dívat? Pro vytvoření nebo obnovení členství zadejte e-mail.</p>
             <div>
-                <input type="text">
+                <div class="relative text-black">
+                    <input required class="peer h-14 w-96 p-4 placeholder-transparent" type="text" id="emailInput" placeholder="E-mailová Adresa">
+                    <label class="absolute left-4 top-4 peer-focus:text-sm peer-focus:top-0  peer-valid:top-0 peer-valid:text-sm transition-all" for="emailInput">E-mailová Adresa</label>
+                </div>
                 <button></button>
             </div>
         </div>
