@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <script defer src="/index.js"></script>
 </head>
-<body>
+<body class="overflow-x-hidden">
 
     <header>
         <nav class="z-50 h-20 pl-5 pr-10 flex items-center justify-between md:justify-around absolute w-screen">
@@ -36,12 +36,12 @@
     </header>
     
 
-    <section class="relative md:pb-24 flex justify-center bg-red-300 h-[32rem] lg:h-[44rem] bg-[url('img/first-section-bg.jpg')] bg-no-repeat bg-cover border-b-[#232323] border-b-[10px]">
+    <section class="relative md:pb-24 flex justify-center bg-red-300 h-[32rem] lg:h-[44rem] bg-[url('img/first-section-bg.jpg')] bg-no-repeat bg-cover border-b-[#232323] border-b-[8px]">
         <div class="absolute inset-0 bg-black opacity-70"></div>
         <div class="px-14 relative h-full text-white flex flex-col items-center gap-3 md:gap-5 justify-center max-w-[90rem]">
-            <h1 class="font-bold w-full text-center text-[1.7rem] md:text-[3rem] mt-[5rem]">Neomezené sledování filmů, TV pořadů a dalšího obsahu</h1>
+            <h1 class="font-bold w-full text-center text-[1.7rem] lg:text-[3rem] md:text-[2.15rem] mt-[5rem] lg:w-[90%]">Neomezené sledování filmů, TV pořadů a dalšího obsahu</h1>
             <p class="text-lg md:text-[1.6rem]">Dívejte se kdekoli. Zrušte kdykoli</p>
-            <p class="text-center w-full text-[1.2rem] md:text-[1.4rem]">Jste připraveni se dívat? Pro vytvoření nebo obnovení členství zadejte e-mail.</p>
+            <p class="text-center w-full text-[1.2rem] lg:text-[1.4rem]">Jste připraveni se dívat? Pro vytvoření nebo obnovení členství zadejte e-mail.</p>
             <div class="w-full lg:w-1/2 max-w-[40rem]">
                 <div class="relative gap-10 md:gap-5 text-white w-full flex flex-col md:flex-row items-center justify-center">
                     <input autocomplete="email" required class="peer w-full bg-black valid:bg-blue-500 valid:bg-opacity-35 valid:border-green-600 invalid:border-[#EB3942] border-2 rounded-md bg-opacity-35 h-14 p-4 pb-1 placeholder-transparent" type="text" id="emailInput" placeholder="E-mailová Adresa">
@@ -59,32 +59,48 @@
         </div>
     </section>
 
-    <section>
-        <div>
-            <h1></h1>
-            <p></p>
+    <section class="h-fit bg-black border-b-[#232323] border-b-[8px] flex flex-col items-center pb-12 md:flex-row md:justify-between md:p-24">
+        <div class="text-white flex flex-col items-center p-12 md:items-start md:w-1/2 lg:p-24">
+            <h1 class="text-3xl text-center font-bold md:text-left md:text-5xl">Užijte si podívanou na televizi</h1>
+            <p class="text-center text-lg md:text-left lg:text-3xl md:mt-5">Dívejte se na Smart TV, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray přehrávačích a dalších zařízeních.</p>
         </div>
-
-        <div>
-            <video src=""></video>
+    
+        <div class="relative px-6 md:w-1/2 max-w-[40rem] mx-auto">
+            <div class="absolute top-[20%] left-[12%] w-[75%] h-[54.5%] md:top-[17%] md:left-[10.5%] md:w-[78%] md:h-[58%] flex justify-center items-center z-0">
+                <video autoplay playsinline muted loop class="w-full h-full">
+                    <source src="/vid/video-tv-0819.m4v" type="video/mp4">
+                </video>
+            </div>
+            <img src="/img/tv.png" alt="TV Image" class="w-full relative z-10">
         </div>
     </section>
+    
+    
+    
+    
+    
+    
 
-    <section>
-        <div>
-            <div>
-                <div><img src="" alt=""></div>
-                <div>
-                    <p></p>
-                    <p></p>
-                </div>
-                <div>
-                    <video src=""></video>
+    <section class="h-fit bg-black border-b-[#232323] border-b-[8px] p-12 md:p-24">
+        <div class="text-white flex flex-col-reverse md:flex-row md:items-center">
+            <div class="relative flex justify-center md:w-1/2">
+                <div><img class="w-[26rem]" src="/img/mobile-0819.jpg" alt="mobile-img"></div>
+                <div class="absolute top-52 flex h-16 w-fit p-2 border-2 border-gray-700 rounded-lg bg-black">
+                    <img class="h-full mr-5" src="/img/boxshot.png" alt="stranger-things-img">
+                    <div class="h-full mr-10">
+                        <p class="font-bold">Stranger Things</p>
+                        <p class="text-blue-700">Stahuji...</p>
+                    </div>
+                    <div class="h-full"><img class="h-full" src="/vid/download.gif" alt="download-gif"></div>
                 </div>
             </div>
-        </div>
 
-        <div></div>
+            <div class="md:w-1/2">
+                <h1 class="text-center font-bold text-3xl md:text-5xl md:text-left">Stáhněte si svoje oblíbené pořady, abyste se mohli dívat i offline</h1>
+                <p class="text-center md:text-left lg:text-3xl mt-5 text-lg md:mt-5">Uložte si svoje oblíbené pořady, abyste se měli pořád na co dívat.</p>
+            </div>
+
+        </div>
     </section>
 
     <section>
