@@ -1,337 +1,594 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix Česko - dívejte se na TV pořady online, dívejte se na filmy online</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Netflix Česko - dívejte se na TV pořady online, dívejte se na filmy online
+    </title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="shortcut icon" href="/img/4375011_logo_netflix_icon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link
+      rel="shortcut icon"
+      href="/img/4375011_logo_netflix_icon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script defer src="/index.js"></script>
-</head>
-<body class="overflow-x-hidden">
-
+  </head>
+  <body class="overflow-x-hidden">
     <header>
-        <nav class="z-50 h-20 pl-5 pr-10 flex items-center justify-between md:justify-around absolute w-full">
-            <div class="h-12 md:h-20 flex items-center">
-                <img class="h-full" src="/img/Netflix_Logo_RGB.png" alt="netflix-logo">
+      <nav
+        class="z-50 h-20 pl-5 pr-10 flex items-center justify-between md:justify-around absolute w-full"
+      >
+        <div class="h-12 md:h-20 flex items-center">
+          <img
+            class="h-full"
+            src="/img/Netflix_Logo_RGB.png"
+            alt="netflix-logo"
+          />
+        </div>
+        <div class="flex items-center gap-3 text-sm">
+          <div
+            class="flex w-fit border-white border-[1px] rounded-[4px] py-1 px-2 text-white"
+          >
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m10.5 21 5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 0 1 6-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 0 1-3.827-5.802"
+                />
+              </svg>
             </div>
-            <div class="flex items-center gap-3 text-sm">
-                <div class="flex w-fit border-white border-[1px] rounded-[4px] py-1 px-2 text-white">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m10.5 21 5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 0 1 6-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 0 1-3.827-5.802" />
-                        </svg>
-                    </div>
-                    <div>
-                        <select class="focus:outline-none bg-transparent w-5 md:w-[5rem]">
-                            <option class="focus:outline-none text-black" value="cs">Čeština</option>
-                            <option class="focus:outline-none text-black" value="en">English</option>
-                        </select>
-                    </div>
-                </div>
-                <button class="bg-[#E50914] text-white rounded-[4px] py-1 px-4 h-8 font-bold">Přihlásit se</button>
+            <div>
+              <select class="focus:outline-none bg-transparent w-5 md:w-[5rem]">
+                <option class="focus:outline-none text-black" value="cs">
+                  Čeština
+                </option>
+                <option class="focus:outline-none text-black" value="en">
+                  English
+                </option>
+              </select>
             </div>
-        </nav>
+          </div>
+          <button
+            class="bg-[#E50914] text-white rounded-[4px] py-1 px-4 h-8 font-bold"
+          >
+            Přihlásit se
+          </button>
+        </div>
+      </nav>
     </header>
-    
 
-    <section class="relative md:pb-24 flex justify-center bg-red-300 h-[32rem] lg:h-[44rem] bg-[url('img/first-section-bg.jpg')] bg-no-repeat bg-cover border-b-[#232323] border-b-[8px]">
-        <div class="absolute inset-0 bg-black opacity-70"></div>
-        <div class="px-14 relative h-full text-white flex flex-col items-center gap-3 md:gap-5 justify-center max-w-[90rem]">
-            <h1 class="font-bold w-full text-center text-[1.7rem] lg:text-[3rem] md:text-[2.15rem] mt-[5rem] lg:w-[90%]">Neomezené sledování filmů, TV pořadů a dalšího obsahu</h1>
-            <p class="text-lg md:text-[1.6rem]">Dívejte se kdekoli. Zrušte kdykoli</p>
-            <p class="text-center w-full text-[1.2rem] lg:text-[1.4rem]">Jste připraveni se dívat? Pro vytvoření nebo obnovení členství zadejte e-mail.</p>
-            <div class="w-full lg:w-1/2 max-w-[40rem]">
-                <div class="relative gap-10 md:gap-5 text-white w-full flex flex-col md:flex-row items-center justify-center">
-                    <input autocomplete="email" required class="peer w-full bg-black valid:bg-blue-500 valid:bg-opacity-35 valid:border-green-600 invalid:border-[#EB3942] border-2 rounded-md bg-opacity-35 h-14 p-4 pb-1 placeholder-transparent" type="text" id="emailInput" placeholder="E-mailová Adresa">
-                    <div class="absolute top-14 left-0 flex items-center mt-2 gap-2 text-sm text-[#EB3942] opacity-0 peer-invalid:opacity-100">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                          </svg>
-                          
-                        E-mail je povinný údaj.
-                    </div>
-                    <label class="absolute left-4 top-4 peer-focus:text-sm peer-focus:top-1  peer-valid:top-1 peer-valid:text-sm transition-all" for="emailInput">E-mailová Adresa</label>
-                    <button class="bg-[#E50914] text-xl whitespace-nowrap font-bold p-3 text-center rounded-[4px]">Začít <span class="ml-3">&#62;</span></button>
-                </div>
+    <section
+      class="relative md:pb-24 flex justify-center bg-red-300 h-[32rem] lg:h-[44rem] bg-[url('img/first-section-bg.jpg')] bg-no-repeat bg-cover border-b-[#232323] border-b-[8px]"
+    >
+      <div class="absolute inset-0 bg-black opacity-70"></div>
+      <div
+        class="px-14 relative h-full text-white flex flex-col items-center gap-3 md:gap-5 justify-center max-w-[90rem]"
+      >
+        <h1
+          class="font-bold w-full text-center text-[1.7rem] lg:text-[3rem] md:text-[2.15rem] mt-[5rem] lg:w-[90%]"
+        >
+          Neomezené sledování filmů, TV pořadů a dalšího obsahu
+        </h1>
+        <p class="text-lg md:text-[1.6rem]">
+          Dívejte se kdekoli. Zrušte kdykoli
+        </p>
+        <p class="text-center w-full text-[1.2rem] lg:text-[1.4rem]">
+          Jste připraveni se dívat? Pro vytvoření nebo obnovení členství zadejte
+          e-mail.
+        </p>
+        <div class="w-full lg:w-1/2 max-w-[40rem]">
+          <div
+            class="relative gap-10 md:gap-5 text-white w-full flex flex-col md:flex-row items-center justify-center"
+          >
+            <input
+              autocomplete="email"
+              required
+              class="peer w-full bg-black valid:bg-blue-500 valid:bg-opacity-35 valid:border-green-600 invalid:border-[#EB3942] border-2 rounded-md bg-opacity-35 h-14 p-4 pb-1 placeholder-transparent"
+              type="text"
+              id="emailInput"
+              placeholder="E-mailová Adresa"
+            />
+            <div
+              class="absolute top-14 left-0 flex items-center mt-2 gap-2 text-sm text-[#EB3942] opacity-0 peer-invalid:opacity-100"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                />
+              </svg>
+
+              E-mail je povinný údaj.
             </div>
+            <label
+              class="absolute left-4 top-4 peer-focus:text-sm peer-focus:top-1 peer-valid:top-1 peer-valid:text-sm transition-all"
+              for="emailInput"
+              >E-mailová Adresa</label
+            >
+            <button
+              class="bg-[#E50914] text-xl whitespace-nowrap font-bold p-3 text-center rounded-[4px]"
+            >
+              Začít <span class="ml-3">&#62;</span>
+            </button>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section class="h-fit bg-black border-b-[#232323] border-b-[8px] flex flex-col items-center pb-12 md:flex-row md:justify-between md:p-24">
-        <div class="text-white flex flex-col items-center p-12 md:items-start md:w-1/2 lg:p-24">
-            <h1 class="text-3xl text-center font-bold md:text-left md:text-5xl">Užijte si podívanou na televizi</h1>
-            <p class="text-center text-lg md:text-left lg:text-3xl md:mt-5">Dívejte se na Smart TV, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray přehrávačích a dalších zařízeních.</p>
-        </div>
-    
-        <div class="relative px-6 md:w-1/2 max-w-[40rem] mx-auto">
-            <div class="absolute top-[20%] left-[12%] w-[75%] h-[54.5%] md:top-[17%] md:left-[10.5%] md:w-[78%] md:h-[58%] flex justify-center items-center z-0">
-                <video autoplay playsinline muted loop class="w-full h-full">
-                    <source src="/vid/video-tv-0819.m4v" type="video/mp4">
-                </video>
-            </div>
-            <img src="/img/tv.png" alt="TV Image" class="w-full relative z-10">
-        </div>
-    </section>
-    
-    
-    
-    
-    
-    
+    <section
+      class="h-fit bg-black border-b-[#232323] border-b-[8px] flex flex-col items-center pb-12 md:flex-row md:justify-between md:p-24"
+    >
+      <div
+        class="text-white flex flex-col items-center p-12 md:items-start md:w-1/2 lg:p-24"
+      >
+        <h1 class="text-3xl text-center font-bold md:text-left md:text-5xl">
+          Užijte si podívanou na televizi
+        </h1>
+        <p class="text-center text-lg md:text-left lg:text-3xl md:mt-5">
+          Dívejte se na Smart TV, PlayStation, Xbox, Chromecast, Apple TV,
+          Blu-ray přehrávačích a dalších zařízeních.
+        </p>
+      </div>
 
-    <section class="h-fit bg-black border-b-[#232323] border-b-[8px] p-12 md:p-24">
-        <div class="text-white flex flex-col-reverse md:flex-row md:items-center">
-            <div class="relative flex justify-center md:w-1/2">
-                <div>
-                    <img src="/img/mobile-0819.jpg" alt="">
-                </div>
-                <div class="absolute top-3/4 flex h-[20%] w-fit p-2 border-2 border-gray-700 rounded-lg bg-black">
-                    <img class="h-full mr-5" src="/img/boxshot.png" alt="stranger-things-img">
-                    <div class="h-full mr-10 flex flex-col justify-center">
-                        <p class="font-bold">Stranger Things</p>
-                        <p class="text-blue-700">Stahuji...</p>
-                    </div>
-                    <div class="h-full"><img class="h-full" src="/vid/download.gif" alt="download-gif"></div>
-                </div>
-            </div>
-
-            <div class="md:w-1/2">
-                <h1 class="text-center font-bold text-3xl md:text-5xl md:text-left">Stáhněte si svoje oblíbené pořady, abyste se mohli dívat i offline</h1>
-                <p class="text-center md:text-left lg:text-3xl mt-5 text-lg md:mt-5">Uložte si svoje oblíbené pořady, abyste se měli pořád na co dívat.</p>
-            </div>
-
+      <div class="relative px-6 md:w-1/2 max-w-[40rem] mx-auto">
+        <div
+          class="absolute top-[20%] left-[12%] w-[75%] h-[54.5%] md:top-[17%] md:left-[10.5%] md:w-[78%] md:h-[58%] flex justify-center items-center z-0"
+        >
+          <video autoplay playsinline muted loop class="w-full h-full">
+            <source src="/vid/video-tv-0819.m4v" type="video/mp4" />
+          </video>
         </div>
+        <img src="/img/tv.png" alt="TV Image" class="w-full relative z-10" />
+      </div>
     </section>
 
+    <section
+      class="h-fit bg-black border-b-[#232323] border-b-[8px] p-12 md:p-24"
+    >
+      <div class="text-white flex flex-col-reverse md:flex-row md:items-center">
+        <div class="relative flex justify-center md:w-1/2">
+          <div>
+            <img src="/img/mobile-0819.jpg" alt="" />
+          </div>
+          <div
+            class="absolute top-3/4 flex h-[20%] w-fit p-2 border-2 border-gray-700 rounded-lg bg-black"
+          >
+            <img
+              class="h-full mr-5"
+              src="/img/boxshot.png"
+              alt="stranger-things-img"
+            />
+            <div class="h-full mr-10 flex flex-col justify-center">
+              <p class="font-bold">Stranger Things</p>
+              <p class="text-blue-700">Stahuji...</p>
+            </div>
+            <div class="h-full">
+              <img class="h-full" src="/vid/download.gif" alt="download-gif" />
+            </div>
+          </div>
+        </div>
 
-    <section class="h-fit bg-black border-b-[#232323] md:items-center border-b-[8px] p-12 md:p-24 flex flex-col-reverse gap-5 md:gap-0 md:flex-row">
         <div class="md:w-1/2">
-            <img src="/img/AAAABeD-KaR-pHr-FoJgHO9DQx0i1pQc64V2q6cbPw8YPNTgJWX6QZL4QOLWG6W1n_KtPgtXRG2-Ei9R1Xe0FsOq6oNoer8GShuj-DBL.png" alt="">
+          <h1 class="text-center font-bold text-3xl md:text-5xl md:text-left">
+            Stáhněte si svoje oblíbené pořady, abyste se mohli dívat i offline
+          </h1>
+          <p class="text-center md:text-left lg:text-3xl mt-5 text-lg md:mt-5">
+            Uložte si svoje oblíbené pořady, abyste se měli pořád na co dívat.
+          </p>
         </div>
-
-        <div class="text-white md:w-1/2">
-            <h1 class="text-center font-bold text-3xl md:text-5xl md:text-left">Vytvořte profily pro děti</h1>
-            <p class="text-center md:text-left lg:text-3xl mt-5 text-lg md:mt-5">S vaším členstvím se děti můžou vydat za dobrodružstvím i se svými oblíbenými hrdiny, a to v prostředí, které je stvořené přímo pro ně.</p>
-        </div>
+      </div>
     </section>
 
-    <section class="h-fit bg-black border-b-[#232323] border-b-[8px] flex flex-col items-center p-12 md:p-24">
-        <h1 class="text-white font-bold text-3xl md:text-5xl">Často kladené dotazy</h1>
-    
-       <div class="w-full md:w-4/6 text-lg md:text-2xl mb-5">
-        <div class="text-white w-full mt-5">
-            <div class="relative bg-[#2D2D2D] p-4 md:px-7 w-full cursor-pointer question ">
-                <div class="flex justify-between items-center w-full h-16">
-                    <div>Co je to Netflix?</div>
-                    <div class=" question-btn transition-all">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="answer bg-[#2D2D2D] w-ful overflow-hidden transition-max-height duration-300 max-h-0">
-                    <div>
-                        Netflix je streamovací služba, která nabízí pestrý výběr oceňovaných TV pořadů, filmů, anime, dokumentů a dalšího, vše dostupné na tisících zařízení s možností připojení k internetu.
-                        <br><br>
-                        Dívejte se podle libosti kdekoli budete chtít, a to bez jediné reklamy a za jeden nízký měsíční poplatek. Vždycky můžete objevovat něco nového, TV pořady a filmy přidáváme každý týden!
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section
+      class="h-fit bg-black border-b-[#232323] md:items-center border-b-[8px] p-12 md:p-24 flex flex-col-reverse gap-5 md:gap-0 md:flex-row"
+    >
+      <div class="md:w-1/2">
+        <img
+          src="/img/AAAABeD-KaR-pHr-FoJgHO9DQx0i1pQc64V2q6cbPw8YPNTgJWX6QZL4QOLWG6W1n_KtPgtXRG2-Ei9R1Xe0FsOq6oNoer8GShuj-DBL.png"
+          alt=""
+        />
+      </div>
 
-
-        <div class="text-white w-full mt-5">
-            <div class="relative bg-[#2D2D2D] p-4 md:px-7 w-full cursor-pointer question">
-                <div class="flex justify-between items-center w-full h-16">
-                    <div>Kde se můžu dívat?</div>
-                    <div class=" question-btn transition-all">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="answer bg-[#2D2D2D] w-ful overflow-hidden transition-max-height duration-300 max-h-0">
-                    <div>
-                        Dívejte se kdekoli a kdykoli. Přihlaste se přes svůj účet Netflix na netflix.com nebo v naší aplikaci a dívejte se na počítači, chytré televizi, telefonu, tabletu, přehrávači nebo herní konzoli. Stačí připojení k internetu.
-                        <br><br>
-                        S aplikací pro iOS a Android si můžete svoje oblíbené seriály taky stahovat. Stahování využijete hlavně před cestou bez internetového připojení. Netflix můžete mít pořád s sebou.
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="text-white w-full mt-5">
-            <div class="relative bg-[#2D2D2D] p-4 md:px-7 w-full cursor-pointer question">
-                <div class="flex justify-between items-center w-full h-16">
-                    <div>Kolik Netflix stojí?</div>
-                    <div class=" question-btn transition-all">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="answer bg-[#2D2D2D] w-ful overflow-hidden transition-max-height duration-300 max-h-0">
-                    <div>
-                        Dívejte se kdekoli a kdykoli. Přihlaste se přes svůj účet Netflix na netflix.com nebo v naší aplikaci a dívejte se na počítači, chytré televizi, telefonu, tabletu, přehrávači nebo herní konzoli. Stačí připojení k internetu.
-                        <br><br>
-                        S aplikací pro iOS a Android si můžete svoje oblíbené seriály taky stahovat. Stahování využijete hlavně před cestou bez internetového připojení. Netflix můžete mít pořád s sebou.
-                    </div>
-                </div>
-            </div>
-        </div>
-       
-
-        <div class="text-white w-full mt-5">
-            <div class="relative bg-[#2D2D2D] p-4 md:px-7 w-full cursor-pointer question">
-                <div class="flex justify-between items-center w-full h-16">
-                    <div>Jak předplatné zruším?</div>
-                    <div class=" question-btn transition-all">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="answer bg-[#2D2D2D] w-ful overflow-hidden transition-max-height duration-300 max-h-0">
-                    <div>
-                        Netflix je flexibilní. Bez otravných smluv a závazků. Účet lze kdykoli jednoduše zrušit dvěma kliknutími. Žádné poplatky za zrušení účtu – začněte nebo přestaňte užívat účet kdykoli.
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="text-white w-full mt-5">
-            <div class="relative bg-[#2D2D2D] p-4 md:px-7 w-full cursor-pointer question">
-                <div class="flex justify-between items-center w-full h-16">
-                    <div>Co můžu na Netflixu vidět?</div>
-                    <div class=" question-btn transition-all">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="answer bg-[#2D2D2D] w-ful overflow-hidden transition-max-height duration-300 max-h-0">
-                    <div>
-                        Netflix má rozsáhlou knihovnu filmů, dokumentů, TV pořadů, anime, oceňovaných pořadů z originální produkce Netflix a mnoho dalšího. Dívejte se podle libosti.
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        
-        <div class="text-white w-full mt-5">
-            <div class="relative bg-[#2D2D2D] p-4 md:px-7 w-full cursor-pointer question">
-                <div class="flex justify-between items-center w-full h-16">
-                    <div>Je Netflix dobrý pro děti?</div>
-                    <div class=" question-btn transition-all">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="answer bg-[#2D2D2D] w-ful overflow-hidden transition-max-height duration-300 max-h-0">
-                    <div>
-                        Součástí vašeho členství na Netflixu je i dětský profil, díky kterému si děti užijí TV pořady a filmy pro celou rodinu, a rodiče budou mít přitom všechno pod kontrolou.
-                        <br><br>
-                        Dětské profily mají rodičovský zámek chráněný kódem PIN, který vám umožňuje stanovit u obsahu, na který se děti koukají, věkové omezení a blokovat konkrétní pořady, na které nechcete, aby se děti dívaly.
-                    </div>
-                </div>
-            </div>
-        </div>
-       </div>
-
-       <div class="text-white mt-5 flex flex-col gap-5 items-center">
-            <h1 class="text-center md:text-2xl">Jste připraveni se dívat? Pro vytvoření nebo obnovení členství zadejte e-mail.</h1>
-            <div class="w-full max-w-[40rem]">
-                <div class="relative gap-10 md:gap-5 text-white w-full flex flex-col md:flex-row items-center justify-center">
-                    <input autocomplete="email" required class="peer w-full bg-black valid:bg-blue-500 valid:bg-opacity-35 valid:border-green-600 invalid:border-[#EB3942] border-2 rounded-md bg-opacity-35 h-14 p-4 pb-1 placeholder-transparent" type="text" id="emailInput2" placeholder="E-mailová Adresa">
-                    <div class="absolute top-14 left-0 flex items-center mt-2 gap-2 text-sm text-[#EB3942] opacity-0 peer-invalid:opacity-100">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                          </svg>
-                          
-                        E-mail je povinný údaj.
-                    </div>
-                    <label class="absolute left-4 top-4 peer-focus:text-sm peer-focus:top-1  peer-valid:top-1 peer-valid:text-sm transition-all" for="emailInput2">E-mailová Adresa</label>
-                    <button class="bg-[#E50914] text-xl whitespace-nowrap font-bold p-3 text-center rounded-[4px]">Začít <span class="ml-3">&#62;</span></button>
-                </div>
-            </div>
-       </div>
-
+      <div class="text-white md:w-1/2">
+        <h1 class="text-center font-bold text-3xl md:text-5xl md:text-left">
+          Vytvořte profily pro děti
+        </h1>
+        <p class="text-center md:text-left lg:text-3xl mt-5 text-lg md:mt-5">
+          S vaším členstvím se děti můžou vydat za dobrodružstvím i se svými
+          oblíbenými hrdiny, a to v prostředí, které je stvořené přímo pro ně.
+        </p>
+      </div>
     </section>
-    
-    
+
+    <section
+      class="h-fit bg-black border-b-[#232323] border-b-[8px] flex flex-col items-center p-12 md:p-24"
+    >
+      <h1 class="text-white font-bold text-3xl md:text-5xl">
+        Často kladené dotazy
+      </h1>
+
+      <div class="w-full md:w-4/6 text-lg md:text-2xl mb-5">
+        <div class="text-white w-full mt-5">
+          <div
+            class="relative bg-[#2D2D2D] p-4 md:px-7 w-full cursor-pointer question"
+          >
+            <div class="flex justify-between items-center w-full h-16">
+              <div>Co je to Netflix?</div>
+              <div class="question-btn transition-all">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 4.5v15m7.5-7.5h-15"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              class="answer bg-[#2D2D2D] w-ful overflow-hidden transition-max-height duration-300 max-h-0"
+            >
+              <div>
+                Netflix je streamovací služba, která nabízí pestrý výběr
+                oceňovaných TV pořadů, filmů, anime, dokumentů a dalšího, vše
+                dostupné na tisících zařízení s možností připojení k internetu.
+                <br /><br />
+                Dívejte se podle libosti kdekoli budete chtít, a to bez jediné
+                reklamy a za jeden nízký měsíční poplatek. Vždycky můžete
+                objevovat něco nového, TV pořady a filmy přidáváme každý týden!
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-white w-full mt-5">
+          <div
+            class="relative bg-[#2D2D2D] p-4 md:px-7 w-full cursor-pointer question"
+          >
+            <div class="flex justify-between items-center w-full h-16">
+              <div>Kde se můžu dívat?</div>
+              <div class="question-btn transition-all">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 4.5v15m7.5-7.5h-15"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              class="answer bg-[#2D2D2D] w-ful overflow-hidden transition-max-height duration-300 max-h-0"
+            >
+              <div>
+                Dívejte se kdekoli a kdykoli. Přihlaste se přes svůj účet
+                Netflix na netflix.com nebo v naší aplikaci a dívejte se na
+                počítači, chytré televizi, telefonu, tabletu, přehrávači nebo
+                herní konzoli. Stačí připojení k internetu.
+                <br /><br />
+                S aplikací pro iOS a Android si můžete svoje oblíbené seriály
+                taky stahovat. Stahování využijete hlavně před cestou bez
+                internetového připojení. Netflix můžete mít pořád s sebou.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-white w-full mt-5">
+          <div
+            class="relative bg-[#2D2D2D] p-4 md:px-7 w-full cursor-pointer question"
+          >
+            <div class="flex justify-between items-center w-full h-16">
+              <div>Kolik Netflix stojí?</div>
+              <div class="question-btn transition-all">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 4.5v15m7.5-7.5h-15"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              class="answer bg-[#2D2D2D] w-ful overflow-hidden transition-max-height duration-300 max-h-0"
+            >
+              <div>
+                Dívejte se kdekoli a kdykoli. Přihlaste se přes svůj účet
+                Netflix na netflix.com nebo v naší aplikaci a dívejte se na
+                počítači, chytré televizi, telefonu, tabletu, přehrávači nebo
+                herní konzoli. Stačí připojení k internetu.
+                <br /><br />
+                S aplikací pro iOS a Android si můžete svoje oblíbené seriály
+                taky stahovat. Stahování využijete hlavně před cestou bez
+                internetového připojení. Netflix můžete mít pořád s sebou.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-white w-full mt-5">
+          <div
+            class="relative bg-[#2D2D2D] p-4 md:px-7 w-full cursor-pointer question"
+          >
+            <div class="flex justify-between items-center w-full h-16">
+              <div>Jak předplatné zruším?</div>
+              <div class="question-btn transition-all">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 4.5v15m7.5-7.5h-15"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              class="answer bg-[#2D2D2D] w-ful overflow-hidden transition-max-height duration-300 max-h-0"
+            >
+              <div>
+                Netflix je flexibilní. Bez otravných smluv a závazků. Účet lze
+                kdykoli jednoduše zrušit dvěma kliknutími. Žádné poplatky za
+                zrušení účtu – začněte nebo přestaňte užívat účet kdykoli.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-white w-full mt-5">
+          <div
+            class="relative bg-[#2D2D2D] p-4 md:px-7 w-full cursor-pointer question"
+          >
+            <div class="flex justify-between items-center w-full h-16">
+              <div>Co můžu na Netflixu vidět?</div>
+              <div class="question-btn transition-all">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 4.5v15m7.5-7.5h-15"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              class="answer bg-[#2D2D2D] w-ful overflow-hidden transition-max-height duration-300 max-h-0"
+            >
+              <div>
+                Netflix má rozsáhlou knihovnu filmů, dokumentů, TV pořadů,
+                anime, oceňovaných pořadů z originální produkce Netflix a mnoho
+                dalšího. Dívejte se podle libosti.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-white w-full mt-5">
+          <div
+            class="relative bg-[#2D2D2D] p-4 md:px-7 w-full cursor-pointer question"
+          >
+            <div class="flex justify-between items-center w-full h-16">
+              <div>Je Netflix dobrý pro děti?</div>
+              <div class="question-btn transition-all">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 4.5v15m7.5-7.5h-15"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              class="answer bg-[#2D2D2D] w-ful overflow-hidden transition-max-height duration-300 max-h-0"
+            >
+              <div>
+                Součástí vašeho členství na Netflixu je i dětský profil, díky
+                kterému si děti užijí TV pořady a filmy pro celou rodinu, a
+                rodiče budou mít přitom všechno pod kontrolou.
+                <br /><br />
+                Dětské profily mají rodičovský zámek chráněný kódem PIN, který
+                vám umožňuje stanovit u obsahu, na který se děti koukají, věkové
+                omezení a blokovat konkrétní pořady, na které nechcete, aby se
+                děti dívaly.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-white mt-5 flex flex-col gap-5 items-center">
+        <h1 class="text-center md:text-2xl">
+          Jste připraveni se dívat? Pro vytvoření nebo obnovení členství zadejte
+          e-mail.
+        </h1>
+        <div class="w-full max-w-[40rem]">
+          <div
+            class="relative gap-10 md:gap-5 text-white w-full flex flex-col md:flex-row items-center justify-center"
+          >
+            <input
+              autocomplete="email"
+              required
+              class="peer w-full bg-black valid:bg-blue-500 valid:bg-opacity-35 valid:border-green-600 invalid:border-[#EB3942] border-2 rounded-md bg-opacity-35 h-14 p-4 pb-1 placeholder-transparent"
+              type="text"
+              id="emailInput2"
+              placeholder="E-mailová Adresa"
+            />
+            <div
+              class="absolute top-14 left-0 flex items-center mt-2 gap-2 text-sm text-[#EB3942] opacity-0 peer-invalid:opacity-100"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                />
+              </svg>
+
+              E-mail je povinný údaj.
+            </div>
+            <label
+              class="absolute left-4 top-4 peer-focus:text-sm peer-focus:top-1 peer-valid:top-1 peer-valid:text-sm transition-all"
+              for="emailInput2"
+              >E-mailová Adresa</label
+            >
+            <button
+              class="bg-[#E50914] text-xl whitespace-nowrap font-bold p-3 text-center rounded-[4px]"
+            >
+              Začít <span class="ml-3">&#62;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer class="bg-black text-white h-fit p-6 md:p-12 flex justify-center">
-
-        <div class="w-full lg:w-1/2">
-
-            <div class="mb-5">Dotazy? Volejte <a href="tel:800 050 701">800 050 701</a></div>
-
-            
-            <div class="flex">
-                <div class=" w-1/2 flex flex-col">
-                    <div class="flex w-full flex-col lg:flex-row gap-5">
-                        <div class="flex flex-col gap-2">
-                            <a href="#">Často kladené dotazy</a>
-                            <a href="#">Účet</a>
-                            <a href="#">Vztahy s investory</a>
-                            <a href="#">Uplatněte dárkové poukazy</a>
-                            <a href="#">Jak se dívat</a>
-                        </div>
-            
-                        <div class="flex flex-col gap-2">
-                            <a href="#">Soukromí</a>
-                            <a href="#">Podnikové informace</a>
-                            <a href="#">Test rychlosti</a>
-                            <a href="#">Právní oznámení</a>
-                            <a href="#">Reklamy</a>
-                        </div>
-                    </div>
-    
-                    <div class="mt-5">
-                        <div class="flex w-fit border-white border-[1px] rounded-[4px] py-1 px-2 text-white">
-                            <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="m10.5 21 5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 0 1 6-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 0 1-3.827-5.802" />
-                                </svg>
-                            </div>
-                            <div>
-                                <select class="focus:outline-none bg-transparent w-5 md:w-[5rem]">
-                                    <option class="focus:outline-none text-black" value="cs">Čeština</option>
-                                    <option class="focus:outline-none text-black" value="en">English</option>
-                                </select>
-                            </div>
-                        </div>
-                        <p class="mt-5">Netflix Česko</p>
-                    </div>
-                </div>
-    
-    
-                <div class="flex flex-col lg:flex-row w-1/2 gap-5">
-                    <div class="flex flex-col gap-2">
-                        <a href="#">Centrum zákaznické podpory</a>
-                        <a href="#">Pro média</a>
-                        <a href="#">Kariéra</a>
-                        <a href="#">Koupit dárkové poukazy</a>
-                        <a href="#">Podmínky používání</a>
-                    </div>
-        
-                    <div class="flex flex-col gap-2">
-                        <a href="#">Nastavení souborů cookie</a>
-                        <a href="#">Kontaktujte nás</a>
-                        <a href="#">Právní záruka</a>
-                        <a href="#">Uvádí jedině Netflix</a>
-                    </div>
-                </div>
-            </div>
-
-
+      <div class="w-full lg:w-1/2">
+        <div class="mb-5">
+          Dotazy? Volejte <a href="tel:800 050 701">800 050 701</a>
         </div>
 
-    </footer>
+        <div class="flex">
+          <div class="w-1/2 flex flex-col">
+            <div class="flex w-full flex-col lg:flex-row gap-5">
+              <div class="flex flex-col gap-2">
+                <a href="#">Často kladené dotazy</a>
+                <a href="#">Účet</a>
+                <a href="#">Vztahy s investory</a>
+                <a href="#">Uplatněte dárkové poukazy</a>
+                <a href="#">Jak se dívat</a>
+              </div>
 
-</body>
+              <div class="flex flex-col gap-2">
+                <a href="#">Soukromí</a>
+                <a href="#">Podnikové informace</a>
+                <a href="#">Test rychlosti</a>
+                <a href="#">Právní oznámení</a>
+                <a href="#">Reklamy</a>
+              </div>
+            </div>
+
+            <div class="mt-5">
+              <div
+                class="flex w-fit border-white border-[1px] rounded-[4px] py-1 px-2 text-white"
+              >
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m10.5 21 5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 0 1 6-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 0 1-3.827-5.802"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <select
+                    class="focus:outline-none bg-transparent w-5 md:w-[5rem]"
+                  >
+                    <option class="focus:outline-none text-black" value="cs">
+                      Čeština
+                    </option>
+                    <option class="focus:outline-none text-black" value="en">
+                      English
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <p class="mt-5">Netflix Česko</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col lg:flex-row w-1/2 gap-5">
+            <div class="flex flex-col gap-2">
+              <a href="#">Centrum zákaznické podpory</a>
+              <a href="#">Pro média</a>
+              <a href="#">Kariéra</a>
+              <a href="#">Koupit dárkové poukazy</a>
+              <a href="#">Podmínky používání</a>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <a href="#">Nastavení souborů cookie</a>
+              <a href="#">Kontaktujte nás</a>
+              <a href="#">Právní záruka</a>
+              <a href="#">Uvádí jedině Netflix</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
